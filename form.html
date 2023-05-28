@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-image: url(Images/Fondo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        </style>
+</head>
+
+<style>
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.hijo{
+	width: 30rem;
+	padding: 1em;
+	border: 0.5em solid #192328;
+    background-color:transparent;
+    margin-top: 1rem;
+    position: center;
+}
+
+.hijo h2{
+	text-align: center;
+	color: black;
+	font-size: 2rem;
+	font-family: 'monospace', sans-serif;
+}
+
+.hijo label{
+	font-family: 'Orbitron', sans-serif;
+	color: black;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+}
+
+
+/*ahora el segundo div*/
+
+.hijo2{
+	width: 30rem;
+	height: 5rem;
+	padding: 1em;
+	border: 0.5em solid #192328;
+    background-color: transparent;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 1x;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[type="sugerencias"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  border: black;
+  border-radius: 3px;
+  background-color: sienna;
+  color: white;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+</style>
+<body>
+	<div>
+		<div class="hijo">
+			<form class="formulario">
+                <h2 id="title" style="text-align: center;">Formulario</h2>
+
+                <label for="name">Ingrese su nombre:</label>
+                <input type="text" id="name" name="name" onkeyup="this.value=Letras(this.value)" required="">
+                <br>
+                <label for="email">Ingrese su email:</label>
+                <input type="email" id="email" name="email" onkeyup="this.value=Letras(this.value)" required="">
+                <br>
+                <label for="sugerencias">Cuéntenos sus necesidades:</label>
+                <textarea type="sugerencias" id="sugerencias" name="sugerencias" onkeyup="this.value=Letras(this.value)" required=""></textarea>
+
+                </form>
+		</div>
+
+		<div class="hijo2">
+			<form>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
